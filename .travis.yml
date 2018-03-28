@@ -12,7 +12,7 @@ install:
 # command to run tests
 before_script:
   - sudo /etc/init.d/mysql stop
-  - docker run  -p 3306:3306 -e MYSQL_ROOT_PASSWORD=a mysql
+  - docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=a mysql
 
 script:
   - pytest # or py.test for Python versions 3.5 and below
