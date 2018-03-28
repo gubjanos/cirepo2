@@ -11,6 +11,7 @@ install:
   - pip install -r requirements.txt
 # command to run tests
 before_script:
+  - sudo /etc/init.d/mysql stop
   - docker run  -p 3306:3306 -e MYSQL_ROOT_PASSWORD=a mysql
 
 script:
